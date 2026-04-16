@@ -1,0 +1,12 @@
+from kaggle.api.kaggle_api_extended import KaggleApi
+
+api = KaggleApi()
+api.authenticate()
+
+api.dataset_download_files(
+    "aaminaalzeri/bpi-challenge-2019-dataset",
+    path="data/raw",
+    unzip=True
+)
+
+print("Dataset downloaded!")
